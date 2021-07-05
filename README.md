@@ -4,13 +4,13 @@
 A web application that scrapes various websites for data related to the Mission to Mars and displays the information in a single HTML page.
 
 ### Scraping
-##Mars News
+### Mars News
 Collect the news title and news description of the latest news
-##JPL Mars Space Images - Featured Image
+### JPL Mars Space Images - Featured Image
 Find the image url for the current Featured Mars Image
-##Mars Facts
+### Mars Facts
 Scrape the table containing facts about the planet including Diameter, Mass, etc.
-##Mars Hemispheres
+## Mars Hemispheres
 Obtain urls of high resolution images for each of Mar's hemispheres
 File(s): mission_to_mars.ipynb
 ##MongoDB and Flask Application
