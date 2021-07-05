@@ -144,31 +144,6 @@ def scrape_hemisphere(html_text):
     }
     return hemisphere
 
-# Main Web Scraping Bot
-
-#def scrape_all():
-    
-    executable_path = {'executable_path': ChromeDriverManager().install()}
-    browser = Browser('chrome', **executable_path, headless=True)
-    news_title, news_paragraph = mars_news(browser)
-    img_url = featured_image(browser)
-    mars_weather = mars_weather(browser)
-    facts = mars_facts()
-    hemisphere_image_urls = hemisphere(browser)
-    timestamp = dt.datetime.now()
-
-    data = {
-        "news_title": news_title,
-        "news_paragraph": news_paragraph,
-        "featured_image": img_url,
-        "weather": mars_weather,
-        "facts": facts,
-        "hemispheres": hemisphere_image_urls,
-        "last_modified": timestamp
-    }
-    
-    browser.quit()
-    return data 
 
 
 if __name__ == "__main__":
