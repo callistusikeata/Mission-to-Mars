@@ -10,21 +10,20 @@ def scrape_all():
     # Initiate headless driver for deployment
     executable_path = {'executable_path': ChromeDriverManager().install()}
     browser = Browser('chrome', **executable_path, headless=True)
-
     news_title, news_paragraph = mars_news(browser)
-
     # Run all scraping functions and store results in a dictionary
     data = {
         "news_title": news_title,
         "news_paragraph": news_paragraph,
         "featured_image": featured_image(browser),
         "facts": mars_facts(),
+        "hemispheres": hemisphere(browser),
         "last_modified": dt.datetime.now()
     }
-
     # Stop webdriver and return data
     browser.quit()
     return data
+
 
 
 def mars_news(browser):
@@ -144,10 +143,10 @@ def scrape_hemisphere(html_text):
         "img_url": sample_element
     }
     return hemisphere
-#################################################
+
 # Main Web Scraping Bot
-#################################################
-def scrape_all():
+
+#def scrape_all():
     
     executable_path = {'executable_path': ChromeDriverManager().install()}
     browser = Browser('chrome', **executable_path, headless=True)
@@ -163,7 +162,7 @@ def scrape_all():
         "news_paragraph": news_paragraph,
         "featured_image": img_url,
         "weather": mars_weather,
-        "facts": mars_facts,
+        "facts": facts,
         "hemispheres": hemisphere_image_urls,
         "last_modified": timestamp
     }
