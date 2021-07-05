@@ -24,6 +24,9 @@ def scrape_all():
     browser.quit()
     return data
 
+    # Stop webdriver and return data
+    browser.quit()
+    return data
 
 
 def mars_news(browser):
@@ -128,8 +131,6 @@ def hemisphere(browser):
         browser.back()
     return hemisphere_image_urls
 
-
-# Helper Function
 def scrape_hemisphere(html_text):
     hemisphere_soup = soup(html_text, "html.parser")
     try: 
@@ -143,8 +144,6 @@ def scrape_hemisphere(html_text):
         "img_url": sample_element
     }
     return hemisphere
-
-
 
 if __name__ == "__main__":
 
