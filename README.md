@@ -12,6 +12,5 @@ Find the image url for the current Featured Mars Image
 Scrape the table containing facts about the planet including Diameter, Mass, etc.
 ## Mars Hemispheres
 Obtain urls of high resolution images for each of Mar's hemispheres
-File(s): mission_to_mars.ipynb
-##MongoDB and Flask Application
+## MongoDB and Flask Application
 Use MongoDB with Flask templating to create a new HTML page that displays all of the information that was scraped from the URLs above.
